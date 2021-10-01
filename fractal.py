@@ -81,7 +81,7 @@ def fractal( t, axiom, prod, iteration, angle, scalefactor ):
             a.pop(-1)
         else:
             # If the command does not match any of the programmed commands, print error message and terminate the program.
-            print(i + ' is an invalid command. Please see the help screen for list of commands.')
+            print(i + ' is an invalid command. Please see the README for list of commands.')
             sys.exit()
 
 
@@ -91,14 +91,6 @@ def parse_args():
 
     # Create the argument parser.
     parser = argparse.ArgumentParser(description='Create a fractal using the Lindenmeyer System. Explanation of this can be found here: https://en.wikipedia.org/wiki/L-system')
-            #Options for drawing:
-            #F = Move forward 1 unit.
-            #G = Move forward 1 unit.
-            #. = Move forward 1 unit without drawing.
-            #+ = Turn left by given angle.
-            #- = Turn right by given angle.
-            #[ = Save current position and angle.
-            #] = Return to saved position and angle.')
 
     # Define the term needed to set each variable, give a brief description of what the variable is, a default value for it and what type it takes in.
     parser.add_argument( "-a", "--axiom", help="Axiom for the fractal. Taken as a string. Example: 'F++F', start by moving forward 1 unit, turning left twice and moving forward 1 unit.", type=str)
